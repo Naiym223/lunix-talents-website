@@ -61,22 +61,6 @@
             font-size: 1rem;
             margin: 0;
         }
-        .button {
-            display: inline-block;
-            margin-top: 1rem;
-            padding: 0.8rem 1.5rem;
-            background: #00c3ff;
-            color: black;
-            font-size: 1rem;
-            font-weight: bold;
-            text-transform: uppercase;
-            text-decoration: none;
-            border-radius: 4px;
-            transition: background 0.3s ease;
-        }
-        .button:hover {
-            background: #009ad6;
-        }
         .contact-form {
             margin-top: 1rem;
             background: #222;
@@ -141,7 +125,11 @@
 
             <div class="contact-form">
                 <h2>Contact Us</h2>
-                <form onsubmit="sendEmail(event)">
+                <form action="https://formsubmit.co/naiymbusiness@gmail.com" method="POST">
+                    <input type="hidden" name="_subject" value="Contact Form Submission">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_template" value="table">
+
                     <label for="name">Your Name:</label>
                     <input type="text" id="name" name="name" required>
 
@@ -159,18 +147,5 @@
     <footer>
         <p>&copy; 2025 Lunix Talents. All Rights Reserved.</p>
     </footer>
-
-    <script>
-        function sendEmail(event) {
-            event.preventDefault();
-
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const message = document.getElementById('message').value;
-
-            const mailtoLink = `mailto:support@xxxx.com?subject=Contact%20Form%20Submission&body=Name:%20${encodeURIComponent(name)}%0AEmail:%20${encodeURIComponent(email)}%0AMessage:%20${encodeURIComponent(message)}`;
-            window.location.href = mailtoLink;
-        }
-    </script>
 </body>
 </html>
