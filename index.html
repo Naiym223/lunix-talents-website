@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lunix Talents</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            color: white;
+            font-family: 'Roboto', Arial, sans-serif;
+            line-height: 1.6;
+        }
+        header {
+            text-align: center;
+            padding: 3rem 1rem;
+            background: linear-gradient(135deg, #1a1a1a, #333);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+        header h1 {
+            font-size: 4rem;
+            margin: 0;
+            color: #00c3ff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+        main {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+        section {
+            margin-bottom: 4rem;
+            padding: 1.5rem;
+            background: linear-gradient(135deg, #222, #333);
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+        }
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #00c3ff;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+        }
+        p {
+            margin: 1rem 0;
+            font-size: 1.2rem;
+        }
+        footer {
+            text-align: center;
+            padding: 1.5rem 0;
+            background-color: #1a1a1a;
+            color: #aaa;
+            border-top: 2px solid #333;
+        }
+        footer p {
+            font-size: 1rem;
+            margin: 0;
+        }
+        .button {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.8rem 1.5rem;
+            background: #00c3ff;
+            color: black;
+            font-size: 1rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background 0.3s ease;
+        }
+        .button:hover {
+            background: #009ad6;
+        }
+        .contact-form {
+            margin-top: 1rem;
+            background: #222;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+        }
+        .contact-form label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 0.8rem;
+            margin-bottom: 1rem;
+            border: none;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+        .contact-form button {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            background: #00c3ff;
+            color: black;
+            font-size: 1rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        .contact-form button:hover {
+            background: #009ad6;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>LUNIX TALENTS</h1>
+    </header>
+    <main>
+        <section id="about">
+            <h2>About Us</h2>
+            <p>At Lunix Talents, we specialize in creating powerful influencer marketing campaigns that drive results for world-class brands. With a unique blend of expertise, creativity, and industry insight, we build authentic, high-impact partnerships between influencers and brands. We believe that the strongest campaigns stem from genuine connections, and we are committed to delivering measurable success. Going the extra mile is our standard, ensuring our clients consistently reach and exceed their goals.</p>
+        </section>
+
+        <section id="music-campaigns">
+            <h2>Music Campaigns</h2>
+            <p>We bring your music to life through strategic collaborations with a top-tier network of creators, ensuring every campaign is delivered with precision, speed, and value that sets a new standard.</p>
+            <p>Our team’s expertise lies in developing impactful strategies that keep your brand ahead of the curve, leveraging real-time trends to amplify success, drive growth, and dominate platforms.</p>
+            <p>From conceptualizing innovative ideas to executing seamless multi-platform campaigns, we merge creativity and strategy to make your music not just heard, but unforgettable.</p>
+        </section>
+
+        <section id="brand-partnerships">
+            <h2>Brand Partnerships</h2>
+            <p>At Lunix, we connect brands with a curated network of top-tier influencers who drive authentic engagement and measurable results. Our extensive roster spans diverse niches and audiences, enabling you to create impactful campaigns that resonate with your target market.</p>
+            <p>We take the guesswork out of influencer partnerships by carefully matching your brand with creators whose values align with yours. From concept to execution, we handle every step to ensure seamless collaboration and exceptional outcomes.</p>
+            <p>Whether you’re launching a new product, amplifying your brand story, or expanding your reach, our network is your gateway to building meaningful connections that deliver results. Let us help you turn influencer partnerships into your next big success story.</p>
+
+            <div class="contact-form">
+                <h2>Contact Us</h2>
+                <form onsubmit="sendEmail(event)">
+                    <label for="name">Your Name:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Your Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="message">Your Message:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Lunix Talents. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        function sendEmail(event) {
+            event.preventDefault();
+
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            const mailtoLink = `mailto:support@xxxx.com?subject=Contact%20Form%20Submission&body=Name:%20${encodeURIComponent(name)}%0AEmail:%20${encodeURIComponent(email)}%0AMessage:%20${encodeURIComponent(message)}`;
+            window.location.href = mailtoLink;
+        }
+    </script>
+</body>
+</html>
